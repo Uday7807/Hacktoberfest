@@ -1,13 +1,186 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RecallAI — Personal Knowledge Search · RecallAI</title>
-<style>
-:root{color-scheme:dark;--bg:#0b1020;--panel:#121a2e;--line:#28344d;--text:#eef3ff;--muted:#a7b4ce;--accent:#8ca8ff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172447,var(--bg) 58%);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);min-height:100vh}.wrap{max-width:1040px;margin:auto;padding:28px 20px}.brand{font-weight:750;letter-spacing:.03em;color:var(--text);text-decoration:none}.top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:22px;border-bottom:1px solid var(--line)}nav{display:flex;gap:14px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-size:14px}nav a:hover{color:var(--text)}main{padding:76px 0;max-width:760px} .eyebrow{color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:700}h1{font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.04em;margin:14px 0}p{color:var(--muted)}.panel{border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#151e34,#10172a);padding:24px;margin-top:28px}.btn{display:inline-block;background:var(--accent);color:#10162a;border-radius:10px;padding:11px 16px;text-decoration:none;font-weight:700;margin:10px 8px 0 0}.btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)}footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:13px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecallAI - Personal Knowledge Search</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #07152f;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 20px 6%;
+      background: #0b1d3b;
+      border-bottom: 1px solid #20375c;
+    }
+
+    nav a {
+      color: #dbeafe;
+      text-decoration: none;
+      margin: 6px;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #60a5fa;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 70px auto;
+      padding: 24px;
+    }
+
+    .hero {
+      padding: 36px;
+      background: #10264a;
+      border: 1px solid #29446f;
+      border-radius: 18px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #c5d4ec;
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 12px 8px 0 0;
+      padding: 12px 18px;
+      background: #60a5fa;
+      color: #07152f;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid #60a5fa;
+      color: white;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .card {
+      padding: 22px;
+      border-radius: 12px;
+      background: #0b1d3b;
+      border: 1px solid #20375c;
+    }
+
+    .card h2 {
+      font-size: 19px;
+    }
+
+    .card a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 28px;
+      text-align: center;
+      color: #9fb3d1;
+    }
+  </style>
 </head>
-<body><div class="wrap"><header class="top"><a class="brand" href="../index.html">✦ RecallAI</a><nav><a href="search.html">Search</a><a href="add-content.html">Add content</a><a href="my-library.html">My library</a><a href="saved-links.html">Saved links</a><a href="faqs.html">FAQs</a></nav></header>
-<main><div class="eyebrow">AI-powered personal search</div><h1>RecallAI — Personal Knowledge Search</h1><p>A private knowledge workspace to search across documents, links, and FAQs.</p><section class="panel"><strong>Your knowledge, in one place.</strong><p>RecallAI combines full-text and semantic retrieval to help you find relevant information across your sources. Connect the FastAPI backend to enable live search and ingestion.</p><a class="btn" href="search.html">Open search</a><a class="btn alt" href="add-content.html">Add content</a></section></main><footer>RecallAI · Hackathon project · FastAPI + SQLite FTS5 + ChromaDB + Gemini</footer></div></body></html>
+
+<body>
+  <nav>
+    <a class="logo" href="index.html">RecallAI</a>
+    <div>
+      <a href="pages/search.html">Search</a>
+      <a href="pages/my-library.html">My Library</a>
+      <a href="pages/saved-links.html">Saved Links</a>
+      <a href="pages/faqs.html">FAQs</a>
+      <a href="pages/settings.html">Settings</a>
+      <a href="pages/account.html">Account</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <p>AI-POWERED PERSONAL KNOWLEDGE SEARCH</p>
+      <h1>Your knowledge, all in one place.</h1>
+      <p>
+        RecallAI helps you organize and find information across
+        documents, notes, links and frequently asked questions.
+      </p>
+      <a class="button" href="pages/search.html">Start searching</a>
+      <a class="button secondary" href="pages/add-content.html">Add content</a>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Search</h2>
+        <p>Find information in your personal knowledge library.</p>
+        <a href="pages/search.html">Open Search →</a>
+      </div>
+
+      <div class="card">
+        <h2>My Library</h2>
+        <p>Explore your indexed knowledge sources.</p>
+        <a href="pages/my-library.html">Open Library →</a>
+      </div>
+
+      <div class="card">
+        <h2>Saved Links</h2>
+        <p>Access links saved for later.</p>
+        <a href="pages/saved-links.html">View Saved Links →</a>
+      </div>
+
+      <div class="card">
+        <h2>Add Content</h2>
+        <p>Add documents, webpages and other knowledge sources.</p>
+        <a href="pages/add-content.html">Add Content →</a>
+      </div>
+
+      <div class="card">
+        <h2>Settings</h2>
+        <p>Manage your website preferences.</p>
+        <a href="pages/settings.html">Open Settings →</a>
+      </div>
+
+      <div class="card">
+        <h2>Account</h2>
+        <p>Access your account page and sign-in options.</p>
+        <a href="pages/account.html">Open Account →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    RecallAI — Your personal knowledge workspace
+  </footer>
+</body>
+</html>
